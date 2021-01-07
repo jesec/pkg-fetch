@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import test from 'ava';
 
-process.env.GITHUB_USERNAME = 'suppress upload error';
+process.env.GITHUB_TOKEN = 'suppress upload error';
 
 function relative (p) {
   const p2 = path.relative(__dirname, p);
