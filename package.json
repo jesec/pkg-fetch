@@ -49,31 +49,20 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/register": "^7.12.10",
-    "ava": "^3.15.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.1.0"
   },
   "scripts": {
-    "babel": "node test/rimraf-es5.js && babel lib --out-dir lib-es5",
+    "babel": "babel lib --out-dir lib-es5",
     "bin": "node lib-es5/bin.js",
     "lint": "eslint .",
     "prepare": "npm run babel",
-    "prepublishOnly": "eslint . && npm test",
-    "start": "npm run babel && node lib-es5/upload.js",
-    "test": "ava"
+    "prepublishOnly": "eslint . ",
+    "start": "npm run babel && node lib-es5/upload.js"
   },
   "eslintConfig": {
     "extends": "eslint-config-prettier",
     "parser": "babel-eslint"
-  },
-  "ava": {
-    "failFast": true,
-    "files": [
-      "test/*.test.js"
-    ],
-    "require": [
-      "@babel/register"
-    ]
   }
 }
