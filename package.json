@@ -60,7 +60,7 @@
     "lint": "eslint .",
     "prepare": "npm run babel",
     "prepublishOnly": "eslint . && npm test",
-    "start": "node lib-es5/upload.js",
+    "start": "npm run babel && node lib-es5/upload.js",
     "test": "ava"
   },
   "eslintConfig": {
