@@ -59,7 +59,7 @@ jobs:
           name: linux-arm64
           path: dist
 
-  linux-static-x64:
+  linuxstatic-x64:
     runs-on: ubuntu-20.04
 
     steps:
@@ -86,10 +86,10 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: linux-static-x64
+          name: linuxstatic-x64
           path: dist
 
-  linux-static-arm64:
+  linuxstatic-arm64:
     runs-on: ubuntu-20.04
 
     steps:
@@ -116,7 +116,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: linux-static-arm64
+          name: linuxstatic-arm64
           path: dist
 
   windows-x64:
