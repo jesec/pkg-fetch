@@ -1,3 +1,14 @@
+--- node/common.gypi
++++ node/common.gypi
+@@ -164,7 +164,7 @@
+           'v8_enable_handle_zapping': 0,
+           'pgo_generate': ' -fprofile-generate ',
+           'pgo_use': ' -fprofile-use -fprofile-correction ',
+-          'lto': ' -flto=4 -fuse-linker-plugin -ffat-lto-objects ',
++          'lto': ' -flto=4 -ffat-lto-objects ',
+           'conditions': [
+             ['node_shared != "true"', {
+               'MSVC_runtimeType': 0    # MultiThreaded (/MT)
 diff --git node/deps/v8/include/v8.h node/deps/v8/include/v8.h
 index fe31e4cac2..080eed6ce7 100644
 --- node/deps/v8/include/v8.h
