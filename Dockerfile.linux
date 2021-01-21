@@ -1,0 +1,13 @@
+FROM registry.redhat.io/rhel8/gcc-toolset-10-toolchain
+
+USER root:root
+
+WORKDIR /root/pkg-fetch/
+
+COPY . ./
+
+RUN yum install -y glibc-headers kernel-headers git python2 python3
+
+RUN npm install
+
+RUN npm run start
